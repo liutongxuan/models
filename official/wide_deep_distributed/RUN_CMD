@@ -1,0 +1,15 @@
+TF_CONFIG='{"cluster": {"chief": ["localhost:2222"],"worker":
+["localhost:2223"],"ps": ["localhost:2224"]},"task": {"type": "evaluator",
+"index": 0}}' python census_main.py &
+
+TF_CONFIG='{"cluster": {"chief": ["localhost:2222"],"worker":
+["localhost:2223"],"ps": ["localhost:2224"]},"task": {"type": "chief","index":
+0}}' python census_main.py &
+
+TF_CONFIG='{"cluster": {"chief": ["localhost:2222"],"worker":
+["localhost:2223"],"ps": ["localhost:2224"]},"task": {"type":
+"worker","index": 0}}' python census_main.py &
+
+TF_CONFIG='{"cluster": {"chief": ["localhost:2222"],"worker":
+["localhost:2223"],"ps": ["localhost:2224"]},"task": {"type": "ps","index":
+0}}' python census_main.py &

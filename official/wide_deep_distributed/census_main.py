@@ -20,12 +20,14 @@ from absl import app as absl_app
 from absl import flags
 import tensorflow as tf
 import sys
+sys.path.append('/code/github/models/official/wide_deep')
+sys.path.append('/code/github/models/official')
 sys.path.append('/code/github/models')
 
 from official.utils.flags import core as flags_core
 from official.utils.logs import logger
-from official.wide_deep import census_dataset
-from official.wide_deep import wide_deep_run_loop
+from official.wide_deep_distributed import census_dataset
+from official.wide_deep_distributed import wide_deep_run_loop
 
 
 def define_census_flags():

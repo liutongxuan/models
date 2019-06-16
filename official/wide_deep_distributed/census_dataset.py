@@ -27,6 +27,9 @@ from absl import flags
 from six.moves import urllib
 import tensorflow as tf
 # pylint: enable=wrong-import-order
+
+sys.path.append('/code/github/models/official/wide_deep')
+sys.path.append('/code/github/models/official')
 sys.path.append('/code/github/models')
 from official.utils.flags import core as flags_core
 
